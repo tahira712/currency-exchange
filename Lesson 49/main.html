@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valyuta Hesablama</title>
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="top">
+                <p>VALYUTA HESABLAMA KALKULYATORU</p>
+            </div>
+            <div class="center">
+                <div class="center-top"><span>Məbləğ</span>
+                    <div class="currency-price">
+                        <div class="currency">
+                            <div class="currency-select">
+                                <select id="fromCurrency" onchange="convertCurrency()" class="select">
+                                    <option value="AZN">AZN</option>
+                                    <option value="USD">USD</option>
+
+                                    <option value="YTL">YTL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="price"><input type="number" id="amountFrom" oninput="convertCurrency()">
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="change-currency" onclick="changeCurrency()"><img src="./img/transfer.svg" alt=""></div>
+                </div>
+                <div class="center-bottom"><span> Çevrilmiş Məbləğ</span>
+                    <div class="currency-price">
+                        <div class="currency">
+                            <div class="currency-select">
+                                <select id="toCurrency" onchange="convertCurrency()" class="select">
+                                    <option value="USD">USD</option>
+                                    <option value="AZN">AZN</option>
+                                    <option value="YTL">YTL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="price"><input type="number" id="amountTo" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"><span>İndikativ məzənnə</span>
+                <span id="exchangeRate">1 AZN = 0.83 USD</span>
+            </div>
+        </div>
+    </main>
+    <script src="app.js">
+
+    </script>
+</body>
+
+</html>
